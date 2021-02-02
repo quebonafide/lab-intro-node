@@ -48,11 +48,7 @@ class SortedList {
     if(this.items.length === 0) {
       throw new Error('EmptySortedList');
     }
-    let a = 0;
-    for (const ele of this.items) {
-      a += ele;
-    }
-    return a/(this.items.length);
+    return this.sum()/(this.items.length);
   }
 }
 
