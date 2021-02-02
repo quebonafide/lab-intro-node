@@ -37,14 +37,23 @@ class SortedList {
   }
 
   sum() {
-    let sum = 0;
-    for (ele of this.items) {
-      sum += ele;
+    let a = 0;
+    for (const ele of this.items) {
+      a += ele;
     }
-    return sum
+    return a;
   }
 
-  avg() {}
+  avg() {
+    if(this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    }
+    let a = 0;
+    for (const ele of this.items) {
+      a += ele;
+    }
+    return a/(this.items.length);
+  }
 }
 
 module.exports = SortedList;
